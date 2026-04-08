@@ -1,4 +1,17 @@
+# Exercícios de Operadores
 
+# Exercicio 1 --- Audio Mp3
+
+def audio_mp3():
+    import subprocess
+    import os
+    
+    # Get the directory of this script and navigate to assets folder
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    caminho_audio = os.path.join(script_dir, "..", "assets", "Duran Duran - invisible Metal Gear Version [RoYXgdHafBA].mp3")
+    
+    subprocess.Popen(["wmplayer.exe", caminho_audio])
+    print("Reproduzindo áudio...")
 
 # Exercicio 2 --- Ímpar ou Par
 
@@ -20,7 +33,7 @@ def maior_ou_menor(num1, num2):
 
     else:
         if num1 > num2:
-            print(f"{num1} é mair que {num2}.")
+            print(f"{num1} é maior que {num2}.")
 
         else:
             print(f"{num2} é maior que {num1}.")
@@ -47,23 +60,25 @@ def media_da_nota(num1, num2, num3, num4, media):
 
 def main():
     opcoes = {
-            1: imp_ou_par,
-            2: maior_ou_menor,
-            3: media_da_nota
+            1: audio_mp3,
+            2: imp_ou_par,
+            3: maior_ou_menor,
+            4: media_da_nota
         }
 
-        print("1 - Ímpar ou Par")
-        print("2 - Maior ou Menor")
-        print("3 - Média")
+    print("1 - Audio Mp3")
+    print("2 - Ímpar ou Par")
+    print("3 - Maior ou Menor")
+    print("4 - Média")
 
-        escolha = int(input("Escolha: "))
+    escolha = int(input("Escolha: "))
 
-        funcao = opcoes.get(escolha)
+    funcao = opcoes.get(escolha)
 
-        if funcao:
-            funcao()  # 🔥 chama automaticamente
-        else:
-            print("Opção inválida")
+    if funcao:
+        funcao()  
+    else:
+        print("Opção inválida")
 
 
 main()
