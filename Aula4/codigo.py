@@ -10,7 +10,7 @@ def escolha_simples():
             continue
         elif var == "n" :
             break
-# Exer num 2 ---
+# Exer num 2 --- contagem de 10 em 10 até 100
 
 def contagem_ate_cem():
     num_1 = 0
@@ -25,7 +25,7 @@ def main():
         }
 
     print("1 - escolha simples")
-    print("1 - comtagem até cem")
+    print("1 - comtagem ate cem")
 
     escolha = int(input("Escolha: "))
 
