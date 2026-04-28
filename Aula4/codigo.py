@@ -18,15 +18,30 @@ def contagem_ate_cem():
         print(num_1)
         num_1 += 10
 
+# Exer num 3 --- tabuada de um numero x até 10
+
+def tabuada():
+    num1 = int(input("Digite um número: "))
+    for mult in range(1, 11):
+        print(f"{num1} x {mult} = {num1 * mult}")
+
+# Exer num 4 --- soma de 5 valores imformado pelo usuario
+
+def soma_de_5():
+
+
 def main():
     opcoes = {
             1: escolha_simples,
-            2: contagem_ate_cem
+            2: contagem_ate_cem,
+            3: tabuada,
+            4: soma_de_5
         }
 
     print("1 - escolha simples")
     print("1 - comtagem ate cem")
-
+    print("3 - tabuda")
+    print("5 - soma_de_5")
     escolha = int(input("Escolha: "))
 
     funcao = opcoes.get(escolha)
